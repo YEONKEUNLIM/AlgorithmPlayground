@@ -1,1 +1,58 @@
+/*
+Time Limit: 1 second
+Memory Limit: 128 MB
+Submissions: 76,515
+Correct: 42,190
+Solved: 37,256
+Accuracy: 55.316%
+Problem
+Print stars such that the first line has 1 star, the second line has 3 stars, and the Nth line has 2×N-1 stars, with the stars being symmetrical around the center.
 
+Input
+The first line contains an integer N (1 ≤ N ≤ 100).
+
+Output
+Print stars from the first line to the Nth line in sequence.
+
+Example Input 1
+5
+Example Output 1
+    *
+   ***
+  *****
+ *******
+*********
+*/
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.Queue;
+public class Main {
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));	
+		
+		int data = Integer.valueOf(br.readLine());
+		
+		
+
+		for(int i = 1; i <= data; i++) {
+			int star = (2*i)-1;
+			String dd = "";
+			String empty = "";
+			for(int j = 0; j < star; j++) {
+				
+				
+				dd += "*";
+			}
+			
+			for(int a = data - i; a > 0; a--) {
+				empty += " ";
+			}
+			
+			System.out.println(empty + dd);
+		}
+	}
+}
