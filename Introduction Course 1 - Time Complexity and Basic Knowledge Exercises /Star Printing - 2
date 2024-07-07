@@ -1,1 +1,49 @@
+/*
+Time Limit: 1 second
+Memory Limit: 128 MB
+Submissions: 337,804
+Correct: 188,451
+Solved: 158,772
+Accuracy: 55.997%
+Problem
+Print stars such that the first line has 1 star, the second line has 2 stars, and the Nth line has N stars, but aligned to the right (see example).
 
+Input
+The first line contains an integer N (1 ≤ N ≤ 100).
+
+Output
+Print stars from the first line to the Nth line in sequence, aligned to the right.
+
+Example Input 1
+5
+Example Output 1
+    *
+   **
+  ***
+ ****
+*****
+*/
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int N = sc.nextInt();
+
+		for(int i = 1; i <= N; i++) {
+			String temp = "";
+			int data = N - i;
+			for(int j = 0; j < data; j++) {temp += " ";}
+			
+			for(int c = 1; c <= i; c++) {
+				
+				temp += "*";
+			}
+			System.out.println(temp);
+		}
+	}	
+}
