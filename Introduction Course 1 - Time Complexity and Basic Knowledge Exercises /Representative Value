@@ -1,1 +1,64 @@
 
+/*
+Time Limit: 1 second
+Memory Limit: 128 MB
+Submissions: 50,182
+Correct: 30,849
+Solved: 28,228
+Accuracy: 62.005%
+Problem
+When representing a set of numbers, the most commonly used value is the average. The average is the sum of all the given numbers divided by the number of numbers. For example, the average of 10, 40, 30, 60, 30 is (10 + 40 + 30 + 60 + 30) / 5 = 170 / 5 = 34.
+
+Another representative value besides the average is the median. The median is the value that lies at the middle of the given numbers when they are arranged in order. For example, for the numbers 10, 40, 30, 60, 30, when arranged in order, we get:
+
+10 30 30 40 60
+Thus, the median is 30.
+
+Given five natural numbers, write a program to calculate their average and median.
+
+Input
+Each line from the first to the fifth line contains one natural number. The given natural numbers are multiples of 10 and are less than 100.
+
+Output
+Print the average on the first line, and the median on the second line. Both the average and the median should be natural numbers.
+
+Example Input 1
+10
+40
+30
+60
+30
+
+Example Output 1
+34
+30
+*/
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Collections;
+
+import javafx.scene.chart.PieChart.Data;
+
+public class Main {
+	static ArrayList<Integer> DataList = new ArrayList<Integer>();
+	static int sum = 0;
+	static int avg = 0;
+	static int centerVal = 0;
+	public static void main(String[] args) throws NumberFormatException, IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+	    for(int i = 0; i < 5; i++) {
+	    	DataList.add(Integer.valueOf(br.readLine()));
+	    	sum += DataList.get(i);
+	    }
+
+	    Collections.sort(DataList);
+	    avg = sum / 5;
+	    centerVal = DataList.get((DataList.size() / 2));
+	    System.out.println(avg);
+	    System.out.println(centerVal);
+	}	
+}
