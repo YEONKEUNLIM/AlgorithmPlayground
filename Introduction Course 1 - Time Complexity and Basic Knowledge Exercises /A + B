@@ -20,13 +20,19 @@
 #Example Output 1:
 #3
 #----------------------------------------------------------------------------------------------
-# Function to add two integers
-def add_two_numbers():
-    # Read input
-    A, B = map(int, input().split())
-    # Output the sum
-    print(A + B)
+import java.util.Scanner;
 
-# Call the function
-add_two_numbers()
+public class Main {
+	static int N;
+	static int M;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		
+		N = sc.nextInt();
+		M = sc.nextInt();
+		System.out.println(N+M);
+	}
+
+}
 #----------------------------------------------------------------------------------------------
