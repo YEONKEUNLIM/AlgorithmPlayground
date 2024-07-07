@@ -1,1 +1,45 @@
+/*
+Time Limit: 1 second
+Memory Limit: 128 MB
+Submissions: 340,976
+Correct: 210,053
+Solved: 173,732
+Accuracy: 62.197%
+Problem
+Print stars such that the first line has 1 star, the second line has 2 stars, and the Nth line has N stars.
 
+Input
+The first line contains an integer N (1 ≤ N ≤ 100).
+
+Output
+Print stars from the first line to the Nth line in sequence.
+
+Example Input 1
+5
+Example Output 1
+*
+**
+***
+****
+*****
+*/
+
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int N = sc.nextInt();
+		
+		for(int i = 1; i <= N; i++) {
+			String temp = "";
+			for(int c = 0; c < i; c++) {
+				temp += "*";
+			}
+			System.out.println(temp);
+		}
+	}	
+}
