@@ -1,1 +1,51 @@
+/*
+Time Limit: 1 second
+Memory Limit: 128 MB
+Submissions: 44,713
+Correct: 26,723
+Solved: 23,855
+Accuracy: 61.275%
+Problem
+Donggyu wants to perform sorting.
 
+He thought of three integers and wants to sort them in ascending order.
+
+Given three integers, write a program to output the smallest, the next, and the largest number in order.
+
+Input
+Three integers are given. Each number is greater than or equal to 1 and less than 1,000,000. All the numbers are distinct.
+
+Output
+Print the smallest number, the next number, and the largest number in order.
+
+Example Input 1
+3 1 2
+Example Output 1
+1 2 3
+*/
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class Main {
+	//static int N;
+	//static int M;
+	static ArrayList<Integer> MAP;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		
+		//N = sc.nextInt();
+		
+		MAP = new ArrayList<Integer>();
+		MAP.add(sc.nextInt());
+		MAP.add(sc.nextInt());
+		MAP.add(sc.nextInt());
+		Collections.sort(MAP);
+		for(int i = 0; i < MAP.size(); i++) {
+			System.out.print(MAP.get(i)+ " ");
+		}
+	}
+
+}
