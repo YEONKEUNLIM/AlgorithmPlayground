@@ -1,1 +1,69 @@
+/*
+Time Limit: 1 second
+Memory Limit: 128 MB
+Submissions: 58,733
+Correct: 34,963
+Solved: 31,595
+Accuracy: 60.036%
+Problem
+Based on the example, deduce the pattern and print the stars accordingly.
 
+Input
+The first line contains an integer N (1 ≤ N ≤ 100).
+
+Output
+Print stars from the first line to the 2×N-1th line in sequence.
+
+Example Input 1
+Copy code
+5
+Example Output 1
+markdown
+Copy code
+*********
+ *******
+  *****
+   ***
+    *
+   ***
+  *****
+ *******
+*********
+
+*/
+
+import java.util.Scanner;
+
+public class StarPattern {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();
+        scanner.close();
+
+        // Upper part of the pattern
+        for (int i = 0; i < N; i++) {
+            // Print leading spaces
+            for (int j = 0; j < i; j++) {
+                System.out.print(" ");
+            }
+            // Print stars
+            for (int j = 0; j < 2 * (N - i) - 1; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        // Lower part of the pattern
+        for (int i = N - 2; i >= 0; i--) {
+            // Print leading spaces
+            for (int j = 0; j < i; j++) {
+                System.out.print(" ");
+            }
+            // Print stars
+            for (int j = 0; j < 2 * (N - i) - 1; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
