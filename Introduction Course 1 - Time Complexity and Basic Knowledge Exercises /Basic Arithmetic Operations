@@ -1,1 +1,52 @@
 
+/*
+Time Limit: 1 second
+Memory Limit: 256 MB
+Submissions: 562,153
+Correct: 252,917
+Solved: 212,852
+Accuracy: 45.047%
+Problem
+Given two natural numbers A and B, write a program to output the results of A+B, A-B, A*B, A/B (quotient), and A%B (remainder).
+
+Input
+Two natural numbers A and B are given. (1 ≤ A, B ≤ 10,000)
+
+Output
+Print the results of A+B on the first line, A-B on the second line, A*B on the third line, A/B on the fourth line, and A%B on the fifth line.
+
+Example Input 1
+Copy code
+7 3
+Example Output 1
+Copy code
+10
+4
+21
+2
+1
+Algorithm Classification
+Mathematics
+Implementation
+Arithmetic Operations
+*/
+
+import java.util.Scanner;
+
+public class Main {
+	static int N;
+	static int M;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		
+		N = sc.nextInt();
+		M = sc.nextInt();
+		System.out.println(N+M);
+		System.out.println(N-M);
+		System.out.println(N*M);
+		System.out.println(N/M);
+		System.out.println(N%M);
+	}
+
+}
