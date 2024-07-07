@@ -1,1 +1,29 @@
 
+/*
+Time Limit: 1 second
+Memory Limit: 128 MB
+Submissions: 1,195,193
+Correct: 482,732
+Solved: 335,495
+Accuracy: 39.396%
+Problem
+Print "Hello World!".
+
+Input
+None
+
+Output
+Print "Hello World!".
+
+
+*/
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Hello World!");
+	}
+
+}
