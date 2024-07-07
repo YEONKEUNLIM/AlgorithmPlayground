@@ -1,1 +1,85 @@
 
+/*
+Time Limit: 1 second
+Memory Limit: 128 MB
+Submissions: 38,623
+Correct: 21,326
+Solved: 18,804
+Accuracy: 56.048%
+Problem
+Given 7 natural numbers, select all the odd natural numbers, calculate their sum, and find the smallest among them.
+
+For example, if the 7 natural numbers are 12, 77, 38, 41, 53, 92, and 85, the odd numbers among them are 77, 41, 53, and 85. Their sum is:
+
+Copy code
+77 + 41 + 53 + 85 = 256
+Among these odd numbers:
+
+Copy code
+41 < 53 < 77 < 85
+So the smallest odd number is 41.
+
+Input
+Each line from the first to the seventh line contains one natural number. The given natural numbers are all less than 100.
+
+Output
+If there are no odd numbers, print -1 on the first line. If there are odd numbers, print the sum of the odd numbers on the first line and the smallest odd number on the second line.
+
+Example Input 1
+12
+77
+38
+41
+53
+92
+85
+
+Example Output 1
+256
+41
+
+Example Input 2
+2
+4
+20
+32
+6
+10
+8
+
+Example Output 2
+-1
+*/
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Main {
+	static int min = 0;
+	static int sum = 0;
+	static ArrayList<Integer> DATA = new ArrayList<Integer>();
+	public static void main(String[] args) throws NumberFormatException, IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	    for(int i = 0; i < 7; i++) {
+	    	int data = Integer.valueOf(br.readLine());
+	    	if((data % 2) == 1) {
+	    		DATA.add(data);
+	    		sum += data;
+	    	}
+	    }
+	    
+	    Collections.sort(DATA);
+	    
+	    int min = 0; 
+	    if(DATA.size() > 0) min = DATA.get(0);
+	    if(sum == 0) sum = -1;
+	    
+	    System.out.println(sum);
+	    if(sum > 0) {
+	    	System.out.println(min);
+	    }
+	}	
+}
