@@ -1,1 +1,47 @@
+/*
+Time Limit: 1 second
+Memory Limit: 128 MB
+Submissions: 419,612
+Correct: 228,983
+Solved: 192,211
+Accuracy: 54.818%
+Problem
+Write a program that receives a test score and outputs the corresponding grade. A score of 90 to 100 is an A, 80 to 89 is a B, 70 to 79 is a C, 60 to 69 is a D, and any other score is an F.
 
+Input
+The first line contains the test score. The test score is an integer between 0 and 100 inclusive.
+
+Output
+Print the test grade.
+
+Example Input 1
+100
+Example Output 1
+A
+*/
+
+import java.util.Scanner;
+
+public class Main {
+	static int N;
+	//static int M;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		
+		N = sc.nextInt();
+		//M = sc.nextInt();
+		if(N>=90) {
+			System.out.println("A");
+		}else if(N>=80 && N<90) {
+			System.out.println("B");
+		}else if(N>=70 && N<80) {
+			System.out.println("C");
+		}else if(N>=60 && N<70) {
+			System.out.println("D");
+		}else{
+			System.out.println("F");
+		}
+	}
+
+}
